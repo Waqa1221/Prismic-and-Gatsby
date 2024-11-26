@@ -28,14 +28,17 @@ const HomePage: React.FC<HomePageProps> = ({ data }) => {
   const ogImage = getImage(homePageData.og_image.gatsbyImageData);
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-50">
-      <div className="bg-white rounded-lg shadow-lg p-8 max-w-3xl w-full">
+    <div className="flex flex-col   bg-gray-50">
+      <div className="bg-white rounded-lg shadow-lg p-8 h-auto w-full">
         <h1 className="text-4xl font-bold mb-4">{homePageData.title}</h1>
         <p className="text-lg text-gray-700 mb-6">{homePageData.select_auth}</p>
 
         {/* Display the image if it's available */}
         {ogImage ? (
-          <div className="rounded overflow-hidden shadow-md">
+          <div
+            className="rounded overflow-hidden shadow-md"
+            // style={{ width: "600px", height: "194px" }} // Optional styling for display
+          >
             <GatsbyImage
               image={ogImage}
               alt={homePageData.title || "Homepage Image"}
@@ -58,7 +61,7 @@ export const query = graphql`
             title
             select_auth
             og_image {
-              gatsbyImageData(aspectRatio: 1.5, height: 10)
+              gatsbyImageData(width: 2000, height: 880)
             }
           }
         }

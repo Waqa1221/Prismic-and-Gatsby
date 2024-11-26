@@ -13,6 +13,8 @@ const IndexPage = ({ data }: { data: any }) => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-transparent">
       <Navbar /> {/* Include Navbar component */}
+      {/* PakHero Section */}
+      {/* Include PakHeroPage here */}
       <div className="bg-white rounded-lg p-8 shadow-lg max-w-4xl w-full mt-8">
         <h1 className="text-xl font-semibold mb-4">Welcome to Gatsby!</h1>
         <p className="text-xl mb-6">{homeImageText}</p>
@@ -132,74 +134,3 @@ export const query = graphql`
 `;
 
 export default IndexPage;
-
-// import React from "react";
-// import { graphql } from "gatsby";
-// import AuthorsPage from "./authors";
-// import HomePage from "./homepage";
-
-// const IndexPage = ({ data }: { data: any }) => {
-//   const homeImageText =
-//     data.allPrismicHomepage.edges[0].node.data.home_mage.text;
-//   const homePageData = data.allPrismicHomePage.edges[0].node.data;
-
-//   return (
-//     <div className="flex flex-col items-center justify-center min-h-screen bg-transparent">
-//       <div className="bg-white rounded-lg p-8 shadow-lg max-w-4xl w-full">
-//         <h1 className="text-xl font-semibold mb-4">Welcome to Gatsby!</h1>
-//         <p className="text-xl">{homeImageText}</p>
-
-//         {/* Display HomePage data */}
-//         <HomePage data={homePageData} />
-
-//         {/* Display AuthorsPage data */}
-//         <AuthorsPage data={data} />
-//       </div>
-//     </div>
-//   );
-// };
-
-// export const query = graphql`
-//   query {
-//     allPrismicHomepage {
-//       edges {
-//         node {
-//           data {
-//             home_mage {
-//               text
-//             }
-//           }
-//         }
-//       }
-//     }
-//     allPrismicAuthors {
-//       edges {
-//         node {
-//           data {
-//             imran_khan {
-//               text
-//             }
-//             description {
-//               text
-//             }
-//           }
-//         }
-//       }
-//     }
-//     allPrismicHomePage {
-//       edges {
-//         node {
-//           data {
-//             title
-//             select_auth
-//             og_image {
-//               gatsbyImageData(aspectRatio: 1.5, height: 10)
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-// `;
-
-// export default IndexPage;
