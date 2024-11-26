@@ -1,0 +1,20 @@
+{
+  "Main": {
+    "title": {
+      "type": "StructuredText",
+      "config": {
+        "single": "heading1",
+        "label": "Title",
+        "placeholder": "Enter a title"
+      }
+    },
+    "content": {
+      "type": "StructuredText",
+      "config": {
+        "multi": "paragraph",
+        "label": "Content",
+        "placeholder": "Enter content"
+      }
+    }
+  }
+}
